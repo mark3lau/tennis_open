@@ -19,12 +19,31 @@ body {
     width: 1.5rem;
 }
 
+.logo {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+    display: inline-block;
+}
+
 .logo-font {
     text-transform: uppercase;
 }
 
+.open-text {
+    color: #15cfbc;
+}
+
 .main-logo-link {
     width: fit-content;
+}
+
+i {
+    color: #15cfbc;
 }
 
 .shop-now-button {
