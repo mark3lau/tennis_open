@@ -12,7 +12,6 @@ class LessonAdmin(admin.ModelAdmin):
 class PackageAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'image',
         'description',
         'price',
     )
