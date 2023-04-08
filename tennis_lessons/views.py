@@ -10,6 +10,8 @@ def all_packages(request):
     context = {
         'packages': packages,
     }
+
+    print(len(packages))
     
     return render(request, 'packages/packages.html', context)
 
@@ -17,10 +19,12 @@ def all_packages(request):
 def package_detail(request, package_id):
     """ A view to show details of all packages """
 
-    packages = get_object_or_404(Package, pk=package_id)
+    package = get_object_or_404(Package, pk=package_id)
 
     context = {
         'package': package,
     }
+
+    print(context)
     
     return render(request, 'packages/package_detail.html', context)
