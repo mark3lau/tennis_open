@@ -36,13 +36,35 @@
                                     <tr>
                                         <td>{{ bag_item.name }}</td>
                                         <td>£{{ bag_item.price }}</td>
-                                    </tr>
+                                        <td>
+                                            <form action="{% url 'delete_from_bag' package_id=bag_item.id %}" method="post">
+                                                {% csrf_token %}
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>                                    
                                     {% endfor %}
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>Total</th>
                                         <td>£{{ total }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="text-right">
+                                            <a href="{% url 'packages' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                                <span class="icon">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                </span>
+                                                <span class="text-uppercase">Keep Shopping</span>
+                                            </a>
+                                            <a href="" class="btn btn-black rounded-0 btn-lg">
+                                                <span class="text-uppercase">Secure Checkout</span>
+                                                <span class="icon">
+                                                    <i class="fas fa-lock"></i>
+                                                </span>
+                                            </a>
+                                        </td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -62,38 +84,3 @@
     </div>
   
 {% endblock %}
-
-
-
-<!-- 
-    <div class="overlay">
-        <div class="container mb-2">
-            <div class="row">
-                <div class="col">
-                    <hr>
-                    <h2 class="logo-font mb-4">Shopping Bag</h2>
-                    <hr>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    {% if bag_items %}
-                        <div class="table-responsive rounded">
-                            {{ bag_items }}
-                        </div>
-                    {% else %}
-                        <p class="lead mb-5">Your bag is empty</p>
-                        <a href="{% url 'packages' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Keep Shopping</span>
-                        </a>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-  
- --> 
