@@ -37,10 +37,7 @@
                                         <td>{{ bag_item.name }}</td>
                                         <td>£{{ bag_item.price }}</td>
                                         <td>
-                                            <form action="{% url 'delete_from_bag' package_id=bag_item.id %}" method="post">
-                                                {% csrf_token %}
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-                                            </form>
+                                            <a class="remove-item text-danger float-right" id="remove_{{ package.package_id}}"><small>Remove</small></a>
                                         </td>
                                     </tr>                                    
                                     {% endfor %}
@@ -84,3 +81,4 @@
     </div>
   
 {% endblock %}
+

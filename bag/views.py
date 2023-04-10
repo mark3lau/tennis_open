@@ -19,22 +19,3 @@ def view_bag(request):
     """ A view to render the bag contents page """
 
     return render(request, 'bag/bag.html')
-
-
-@require_POST
-def delete_from_bag(request, package_id):
-
-    # Get the package object
-    package = get_object_or_404(Package, pk=package_id)
-    
-    # Get the bag from the session
-    bag = request.session.get('bag', {})
-    
-    # If the package is in the bag, remove it
-    if package_id in bag:
-        del bag[package_id]
-        
-    # Update the bag in the session
-    request.session['bag'] = bag
-    
-    return redirect('view_bag')
