@@ -37,7 +37,7 @@
                                         <td>{{ bag_item.name }}</td>
                                         <td>£{{ bag_item.price }}</td>
                                         <td>
-                                            <a class="remove-item text-danger float-right" id="remove_{{ package.package_id}}"><small>Remove</small></a>
+                                            <a class="remove-item text-danger float-right" id="remove_{{ bag_item.package_id}}"><small>Remove</small></a>
                                         </td>
                                     </tr>                                    
                                     {% endfor %}
@@ -82,3 +82,26 @@
   
 {% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+
+<script type='text/javascript'>
+
+    //Remove package and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var packageID = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${packageID}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken}
+
+        $.post(url, data)
+        .done(function() {
+            location.reload();
+        });
+
+        console.log('its working')
+    })
+
+</script>
+
+{% endblock %}
