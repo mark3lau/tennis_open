@@ -5,7 +5,6 @@ html {
 body {
     background: url(/media/two-tennis-players.jpg) no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh; 
     color: #555;
     font-family: 'Montserrat', sans-serif;
 }
@@ -31,12 +30,12 @@ h1 {
 }
 
 .main-logo-font,
-.logo-font {
+.main-nav-link {
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.logo-font:hover {
+.main-nav-link:hover {
     border: 1px solid black;
     background: #15cfbc;
     color: black;
@@ -101,11 +100,11 @@ i {
 }
 
 .overlay {
-    height: 300%;
+    height: calc(100% - 108px);
     width: 100vw;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     background: white;
     z-index: -100;
     margin-top: 160px;

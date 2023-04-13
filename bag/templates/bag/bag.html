@@ -92,14 +92,14 @@
         var csrfToken = "{{ csrf_token }}";
         var packageID = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${packageID}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken}
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        }
 
         $.post(url, data)
         .done(function() {
             location.reload();
         });
-
-        console.log('its working')
     })
 
 </script>

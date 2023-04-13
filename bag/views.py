@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from tennis_lessons.models import Package
 from django.views.decorators.http import require_POST
@@ -28,9 +28,14 @@ def view_bag(request):
 def remove_from_bag(request, package_id):
     """ Remove an item from the bag """
 
+    package = Package.objects.get(pk=package_id)
     bag = request.session.get('bag', {})
+    
     if package_id in bag:
         bag.pop(package_id)
+        messages.success(request, f'Removed {package.name} from your bag')
 
     request.session['bag'] = bag
     return HttpResponse(status=200)
+
+

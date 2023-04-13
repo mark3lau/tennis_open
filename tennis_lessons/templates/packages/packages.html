@@ -10,54 +10,57 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay">
-    <div class="row">
-        <div class="packages-container col-10 offset-1 mt-3">
-            <hr class="w-50 mb-1">
-            {% for package in packages %}
-            <div class="row">
-                <div class="card h-100 border-0">
-                    <div class="card-body pb-0">
-                        <p class="mb-0"><strong>{{ package.name }}</strong></p>
-                        <br>
-                        <p class="mb-0">{{ package.description }}</p>
-                        <br>
-                        <p class="mb-0"><strong>What You Get:</strong></p>
-                        <br>
-                        <p class="mb-0">{{ package.detail_1 }}</p>
-                        <p class="mb-0">{{ package.detail_2 }}</p>
-                        <p class="mb-0">{{ package.detail_3 }}</p>
-                        <p class="mb-0">{{ package.detail_4 }}</p>
-                        <br>
-                    </div>
-                    <div class="card-footer bg-white pt-0 border-0 text-left">
-                        <div class="row">
-                            <div class="col">
-                                <p class="lead mb-0 text-left font-weight-bold">£{{ package.price }}</p>
-                            </div>
+
+<div class="row">
+    <div class="packages-container col-10 offset-1 mt-3">
+        <hr class="w-50 mb-1">
+        {% for package in packages %}
+        <div class="row">
+            <div class="card h-100 border-0">
+                <div class="card-body pb-0">
+                    <p class="mb-0"><strong>{{ package.name }}</strong></p>
+                    <br>
+                    <p class="mb-0">{{ package.description }}</p>
+                    <br>
+                    <p class="mb-0"><strong>What You Get:</strong></p>
+                    <br>
+                    <p class="mb-0">{{ package.detail_1 }}</p>
+                    <p class="mb-0">{{ package.detail_2 }}</p>
+                    <p class="mb-0">{{ package.detail_3 }}</p>
+                    <p class="mb-0">{{ package.detail_4 }}</p>
+                    <br>
+                </div>
+                <div class="card-footer bg-white pt-0 border-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead mb-0 text-left font-weight-bold">£{{ package.price }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4 p-0">
-                <form class="form" action="{% url 'add_to_bag' package.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-12">
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase font-weight-bold mt-3" value="Add to Bag">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </div>
-                </form>
-            </div>
-            
-            <div class="col-12">
-                <hr>
-            </div>
-
-            {% endfor %}
         </div>
+
+        <div class="col-12 col-md-6 col-lg-4 p-0">
+            <form class="form" action="{% url 'add_to_bag' package.id %}" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-12">
+                        <input type="submit" class="btn btn-black rounded-0 text-uppercase font-weight-bold mt-3"
+                            value="Add to Bag">
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </div>
+            </form>
+        </div>
+
+        <div class="col-12">
+            <hr>
+        </div>
+
+        {% endfor %}
     </div>
 </div>
+
+<div class="overlay"></div>
+
 {% endblock %}
