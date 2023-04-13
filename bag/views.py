@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import messages
 from tennis_lessons.models import Package
 from django.views.decorators.http import require_POST
