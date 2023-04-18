@@ -26,7 +26,7 @@ def view_bag(request):
 
 
 def remove_from_bag(request, package_id):
-    """ Remove an item from the bag """
+    """ Remove a package from the bag """
 
     package = Package.objects.get(pk=package_id)
     bag = request.session.get('bag', {})

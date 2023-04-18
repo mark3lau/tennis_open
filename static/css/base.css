@@ -3,10 +3,19 @@ html {
 }
 
 body {
-    background: url(/media/two-tennis-players.jpg) no-repeat center center fixed;
-    background-size: cover;
     color: #555;
     font-family: 'Montserrat', sans-serif;
+}
+
+.hero-image {
+    background: url(/media/two-tennis-players.jpg) no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 /* from Bulma */
@@ -35,10 +44,12 @@ h1 {
     font-weight: bold;
 }
 
-.main-nav-link:hover {
+.main-nav-link:hover,
+.register-now-button:hover {
     border: 1px solid black;
     background: #15cfbc;
     color: black;
+    text-decoration: none;
 }
 
 .open-text {
