@@ -21,7 +21,7 @@ class Package(models.Model):
     detail_2 = models.TextField(blank=True)
     detail_3 = models.TextField(blank=True)
     detail_4 = models.TextField(blank=True)
-    price = models.FloatField(default=0, blank=False)
+    price = models.DecimalField(max_digits=6, decimal_places=0, default=0, blank=False)
 
     def __str__(self):
         return self.name

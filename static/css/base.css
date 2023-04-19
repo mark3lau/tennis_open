@@ -115,11 +115,11 @@ i {
     width: 100vw;
     top: 0;
     left: 0;
-    position: fixed;
+    position: absolute;
     background: white;
-    z-index: -100;
+    z-index: -1000000;
     margin-top: 160px;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .p.mb-0 {

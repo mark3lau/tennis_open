@@ -19,7 +19,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=100, null=True, blank=True)
     county = models.CharField(max_length=50, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    order_total = models.FloatField(null=False, default=0)
+    order_total = models.DecimalField(max_digits=6, decimal_places=0, null=False, default=0)
 
     def _generate_order_number(self):
         """
@@ -32,7 +32,7 @@ class Order(models.Model):
         """
         Update total each time a line item is added
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = round(self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'])
         self.save()
 
     def save(self, *args, **kwargs):
