@@ -118,7 +118,7 @@ i {
     position: fixed;
     background: white;
     z-index: -100;
-    /* margin-top: 160px; */
+    margin-top: 160px;
     overflow: hidden;
 }
 
@@ -139,6 +139,12 @@ i {
 
 .toast-capper {
     height: 2px;
+}
+
+.package-name {
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: underline;
 }
 
 
