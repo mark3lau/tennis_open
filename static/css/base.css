@@ -13,6 +13,7 @@ body {
     background-position: center;
     height: 80vh;
     width: 100%;
+    margin-top: 40px;
     top: 0;
     left: 0;
     z-index: -1;
@@ -44,11 +45,17 @@ h1 {
     font-weight: bold;
 }
 
-.main-nav-link:hover,
-.register-now-button:hover {
+.main-nav-link:hover {
     border: 1px solid black;
     background: #15cfbc;
     color: black;
+    text-decoration: none;
+}
+
+.register-now-button:hover {
+    border: 2px solid #15cfbc;
+    background: black;
+    color: #15cfbc;
     text-decoration: none;
 }
 
@@ -62,6 +69,14 @@ h1 {
 
 i {
     color: #15cfbc;
+}
+
+.register-now-button {
+    font-size: larger;
+    border: 1px solid black;
+    background: #15cfbc;
+    color: black;
+    text-decoration: none;
 }
 
 .shop-now-button {
