@@ -19,6 +19,10 @@ body {
     z-index: -1;
 }
 
+.tennis-girl {
+    width: 100%;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
