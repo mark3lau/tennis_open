@@ -50,7 +50,7 @@
             </div>
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <h1 class="main-logo-font text-black my-0 font-weight-bold">Tennis<strong class="open-text">Open</strong></h1>
+                <h1 class="main-logo-font text-black my-0 font-weight-bold">TENNIS<strong class="open-text">Open</strong></h1>
             </div>
             
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -67,7 +67,7 @@
                                 {% if request.user.is_superuser %}
                                  <a href="" class="dropdown-item">Management</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
