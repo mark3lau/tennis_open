@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Package
 from django.contrib import messages
+from .forms import PackageForm
 
 
 def all_packages(request):
@@ -26,3 +27,14 @@ def all_packages(request):
     }
 
     return render(request, 'packages/packages.html', context)
+
+
+def add_package(request):
+    """ Add a package to the store """
+    form = PackageForm()
+    template = 'tennis_lessons/add_package.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

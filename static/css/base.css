@@ -172,6 +172,33 @@ i {
     text-decoration: underline;
 }
 
+#packages-divider {
+    color: red;
+}
+
+/* Footer */
+
+footer {
+    height: 3%;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links > li {
+    display: inline;
+}
+
+.social-links i {
+    font-size: 200%;
+    padding: 2%;
+    color: #15cfbc;
+}
+
+.social-links i:hover {
+    transform: scale(1.5);
+}
 
 /* -------------------------------- Media Queries */
 
