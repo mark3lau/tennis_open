@@ -21,13 +21,17 @@ body {
 }
 
 h2 {
-    color: #15cfbc;
+    color: #555;
     font-weight: bold;
 }
 
 .tennis-girl {
     width: 100%;
     height: 90%;
+}
+
+.names {
+    color: #15cfbc;
 }
 
 /* from Bulma */
