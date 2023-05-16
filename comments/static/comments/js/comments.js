@@ -1,24 +1,24 @@
 // Submit the comment form using AJAX
-$('#comment-form').on('submit', function(e) {
-    e.preventDefault();
-    var message = $('#comment-message').val();
-    $.ajax({
-        url: commentCreateUrl,
-        type: 'POST',
-        data: {
-            'message': message,
-            'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
-        },
-        success: function(data) {
-            console.log('Comment created successfully:', data);
-            $('#comment-message').val('');
-            $('#comment-list').prepend(data);
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log('Error creating comment:', errorThrown);
-        }
-    });
-});
+// $('#comment-form').on('submit', function(e) {
+//     e.preventDefault();
+//     var message = $('#comment-message').val();
+//     $.ajax({
+//         url: commentCreateUrl,
+//         type: 'POST',
+//         data: {
+//             'message': message,
+//             'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+//         },
+//         success: function(data) {
+//             console.log('Comment created successfully:', data);
+//             $('#comment-message').val('');
+//             $('#comment-list').prepend(data);
+//         },
+//         error: function(jqXHR, textStatus, errorThrown) {
+//             console.log('Error creating comment:', errorThrown);
+//         }
+//     });
+// });
 
 // Delete a comment using AJAX
 $('#comment-list').on('click', '.delete-comment', function() {

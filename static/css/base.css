@@ -180,10 +180,15 @@ i {
     color: red;
 }
 
+.packages-border {
+    border: solid 2px #15cfbc;
+}
+
 /* Footer */
 
 footer {
     height: 3%;
+    position: relative;
 }
 
 .social-links {

@@ -7,10 +7,10 @@
 {% block content %}
 
 <div class="row">
-    <div class="packages-container col-10 offset-1 mt-3">
-        {% for package in packages %}
-        <div class="row">
-            <div class="card h-100 border-0">
+    <div class="container">
+        <div class="packages-container col-lg-10 col-md-10 col-sm-12 offset-lg-1 offset-md-1 mt-3 mx-auto">
+            {% for package in packages %}
+            <div class="card h-100 packages-border">
                 <div class="card-body pb-0">
                     <p class="package-name mb-0 text-uppercase"><strong>{{ package.name }}</strong></p>
                     <br>
@@ -31,27 +31,23 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 p-0">
-            <form class="form" action="{% url 'add_to_bag' package.id %}" method="POST">
-                {% csrf_token %}
-                <div class="form-row">
-                    <div class="col-12">
-                        <input type="submit" class="btn btn-black rounded-0 text-uppercase font-weight-bold mt-3"
-                            value="Add to Bag">
-                    </div>
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            
+                <div class="col-12 col-md-6 col-lg-6 p-2">
+                    <form class="form" action="{% url 'add_to_bag' package.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase font-weight-bold mt-3"
+                                    value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
+            <br>
+            {% endfor %}
         </div>
-
-        <div class="col-12">
-            <hr id="packages-divider">
-        </div>
-
-        {% endfor %}
     </div>
 </div>
 
