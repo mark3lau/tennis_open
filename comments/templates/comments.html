@@ -54,8 +54,8 @@
 {% block javascript %}
 <script>
     const commentCreateUrl = "{% url 'post_comment' %}";
-    const commentDeleteUrlTemplate = "{% url 'delete_comment' commentId=0 %}";
-    const commentEditUrlTemplate = "{% url 'edit_comment' commentId=0 %}";
+    const commentDeleteUrlTemplate = "/comments/{{ commentId }}/delete/";
+    const commentEditUrlTemplate = "/comments/{{ commentId }}/edit/";
 </script>
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
