@@ -99,6 +99,14 @@ i {
     min-width: 260px;
 }
 
+.edit-comment {
+    background: #4dd0e1;
+}
+
+.delete-comment {
+    background: #FFB6C1;
+}
+
 .btn-black {
     background: #15cfbc;
     color: black;
@@ -110,11 +118,32 @@ i {
     border: 1px solid black;
 }
 
+.edit-comment:hover,
+.edit-comment:active,
+.edit-comment:focus {
+    background: black;
+    color: #4dd0e1 !important;
+}
+
+.delete-comment:hover,
+.delete-comment:active,
+.delete-comment:focus {
+    background: black;
+    color: #FFB6C1 !important;
+}
+
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
     background: black;
-    color: white !important;
+    color: #15cfbc !important;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: #15cfbc !important;
 }
 
 .shop-now-button:hover,
@@ -124,7 +153,7 @@ i {
 .btn-black:active,
 .btn-black:focus {
     background: #222;
-    color: white;
+    color: #15cfbc;
 }
 
 .remove-item {
@@ -176,11 +205,14 @@ i {
     text-decoration: underline;
 }
 
-#packages-divider {
-    color: red;
+.packages-border {
+    border: solid 2px #15cfbc;
 }
 
-.packages-border {
+
+/* Contact Us Form */
+
+.contact-us-container {
     border: solid 2px #15cfbc;
 }
 
