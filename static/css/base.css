@@ -107,7 +107,8 @@ i {
     background: #FFB6C1;
 }
 
-.btn-black {
+.btn-black,
+.submit-btn {
     background: #15cfbc;
     color: black;
 }
@@ -152,7 +153,7 @@ i {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: black;
     color: #15cfbc;
 }
 
