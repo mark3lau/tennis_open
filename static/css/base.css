@@ -57,6 +57,8 @@ h1 {
 .main-nav-link {
     text-transform: uppercase;
     font-weight: bold;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .main-nav-link:hover {
@@ -209,6 +211,9 @@ i {
     border: solid 2px #15cfbc;
 }
 
+.order-total { 
+    color: #15cfbc;
+}
 
 /* Contact Us Form */
 
@@ -231,6 +236,7 @@ footer {
 
 .social-links {
     text-align: center;
+    padding-left: 0;
 }
 
 .social-links > li {
@@ -245,6 +251,10 @@ footer {
 
 .social-links i:hover {
     transform: scale(1.5);
+}
+
+.social-links li:not(:last-child) {
+    margin-right: 50px;
 }
 
 /* -------------------------------- Media Queries */

@@ -17,19 +17,22 @@
                         <h5 class="card-title">{{ comment.user.username }}</h5>
                         <p class="card-text">{{ comment.message }}</p>
                         <p class="card-text"><small class="text-muted">{{ comment.created_at }}</small></p>
-                        
+
                         {% if comment.user == request.user %}
-                        <form action="{% url 'edit_comment' comment.id %}" method="post">
-                            {% csrf_token %}
-                            <button type="submit" class="btn rounded-0 text-uppercase font-weight-bold mt-3 edit-comment"
-                            value="Edit" data-comment-id="{{ comment.id }}">Edit</button>
-                        </form>
-                        
-                        <form action="{% url 'delete_comment' pk=comment.id %}" method="post">
-                            {% csrf_token %}
-                            <button type="submit" class="btn rounded-0 text-uppercase font-weight-bold mt-3 delete-comment"
+                       
+                            <form action="{% url 'edit_comment' comment.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit"
+                                    class="btn rounded-0 text-uppercase font-weight-bold mt-3 edit-comment" value="Edit"
+                                    data-comment-id="{{ comment.id }}">Edit</button>
+                            </form>
+                            <form action="{% url 'delete_comment' pk=comment.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit"
+                                    class="btn rounded-0 text-uppercase font-weight-bold mt-3 delete-comment"
                                     value="Delete" data-comment-id="{{ comment.id }}">Delete</button>
-                        </form>
+                            </form>
+                      
                         {% endif %}
                     </div>
                 </div>
@@ -45,8 +48,7 @@
             <form method="POST" id="comment-form">
                 {% csrf_token %}
                 {{form}}
-                <input type="submit" class="btn btn-black rounded-0 text-uppercase font-weight-bold mt-3"
-                value="Post">
+                <input type="submit" class="btn btn-black rounded-0 text-uppercase font-weight-bold mt-3" value="Post">
             </form>
             {% else %}
             <p>You must <a href="{% url 'account_login' %}?next={{ request.path }}">log in</a> to post a comment.</p>

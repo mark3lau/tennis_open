@@ -27,24 +27,3 @@ def all_packages(request):
     }
 
     return render(request, 'packages/packages.html', context)
-
-
-def add_package(request):
-    """ Add a package to the store """
-    if request.method == 'POST':
-        form = PackageForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added package!')
-            return redirect(reverse('add_package'))
-        else:
-            messages.error(request, 'Failed to add package. Please ensure the form is valid.')
-    else:
-        form = PackageForm()
-
-    template = 'tennis_lessons/add_package.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
