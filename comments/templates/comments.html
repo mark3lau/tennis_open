@@ -34,10 +34,7 @@
         <h2>Post a Comment</h2>
         <form method="POST" id="comment-form">
             {% csrf_token %}
-            <div class="form-group">
-                <label for="comment-message">Message:</label>
-                <textarea class="form-control" id="comment-message" name="message" rows="3"></textarea>
-            </div>
+            {{form}}
             <input type="submit" class="btn btn-black rounded-0 text-uppercase font-weight-bold mt-3"
             value="Post">
         </form>
