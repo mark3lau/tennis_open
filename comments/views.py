@@ -36,16 +36,7 @@ def edit_comment(request, pk):
     return render(request, 'edit_comment.html', {'form': form})
 
 
-class DeleteComment(DeleteView):
-    model = Comment
-    template_name = 'delete.html'
-    success_url = reverse_lazy('comments')
-
-    def delete(self, request, *args, **kwargs):
-        messages.success(request, "Your comment has been deleted.")
-        return super().delete(request, *args, **kwargs)
-
-
+# For the user to post a comment
 def comments(request):
     comments = Comment.objects.all()
     if request.method == 'POST':
@@ -62,3 +53,31 @@ def comments(request):
         'comments': comments
     }
     return render(request, 'comments.html', context)
+
+
+# For the user to edit a comment
+class EditComment(UpdateView):
+    model = Comment
+    fields = ('message',)
+    template_name = 'update_comment.html'
+    success_url = reverse_lazy('comments')
+    success_message = "Your comment has been updated successfully."
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(name=self.request.user.username)
+
+    def get_object(self, queryset=None):
+        comment_id = self.kwargs['pk']
+        return Comment.objects.get(pk=comment_id) 
+
+
+# For the user to delete a comment
+class DeleteComment(DeleteView):
+    model = Comment
+    template_name = 'delete.html'
+    success_url = reverse_lazy('comments')
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(request, "Your comment has been deleted.")
+        return super().delete(request, *args, **kwargs)
