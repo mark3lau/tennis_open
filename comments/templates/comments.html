@@ -19,8 +19,12 @@
                     <p class="card-text"><small class="text-muted">{{ comment.created_at }}</small></p>
                     <button type="button" class="btn rounded-0 text-uppercase font-weight-bold mt-3 edit-comment"
                     value="Edit" data-comment-id="{{ comment.id }}">Edit</button>
-                    <button type="button" class="btn rounded-0 text-uppercase font-weight-bold mt-3 delete-comment"
-                    value="Delete" data-comment-id="{{ comment.id }}">Delete</button>
+                    
+                    <form action="{% url 'delete_comment' pk=comment.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn rounded-0 text-uppercase font-weight-bold mt-3 delete-comment"
+                                value="Delete" data-comment-id="{{ comment.id }}">Delete</button>
+                    </form>
                 </div>
             </div>
             {% empty %}
