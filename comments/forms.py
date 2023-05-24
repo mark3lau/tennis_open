@@ -8,3 +8,9 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('message',)
+
+    def __init__(self, *args, **kwargs):
+        initial_message = kwargs.get('initial', {}).get('message')
+        super().__init__(*args, **kwargs)
+        if initial_message:
+            self.fields['message'].initial = initial_message

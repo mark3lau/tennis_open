@@ -8,6 +8,29 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+    display: inline-block;
+}
+
+h2 {
+    color: #555;
+    font-weight: bold;
+}
+
+.names {
+    color: #15cfbc;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* Images */
+
 .hero-image {
     background: url(/media/two-tennis-players.jpg) no-repeat center center;
     background-size: cover;
@@ -20,26 +43,8 @@ body {
     z-index: -1;
 }
 
-h2 {
-    color: #555;
-    font-weight: bold;
-}
-
 .tennis-girl {
     width: 100%;
-}
-
-.names {
-    color: #15cfbc;
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
 }
 
 .logo {
@@ -49,9 +54,27 @@ h2 {
     height: 100px;
 }
 
-h1 {
-    display: inline-block;
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: white;
+    z-index: -1000000;
+    margin-top: 160px;
+    overflow-y: scroll;
 }
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Header / Navigation bar */
 
 .main-logo-font,
 .main-nav-link {
@@ -67,6 +90,12 @@ h1 {
     text-decoration-thickness: 3px;
 }
 
+.main-logo-link {
+    width: fit-content;
+}
+
+/* Home page */
+
 .register-now-button:hover {
     border: 2px solid #15cfbc;
     background: black;
@@ -78,14 +107,6 @@ h1 {
     color: #15cfbc;
 }
 
-.main-logo-link {
-    width: fit-content;
-}
-
-i {
-    color: #15cfbc;
-}
-
 .register-now-button {
     font-size: larger;
     border: 1px solid black;
@@ -94,11 +115,7 @@ i {
     text-decoration: none;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
+/* The Open Wall page */
 
 .edit-comment {
     background: #4dd0e1;
@@ -106,6 +123,14 @@ i {
 
 .delete-comment {
     background: #FFB6C1;
+}
+
+/* Buttons */
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
 }
 
 .btn-black,
@@ -162,26 +187,6 @@ i {
     cursor: pointer;
 }
 
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.overlay {
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background: white;
-    z-index: -1000000;
-    margin-top: 160px;
-    overflow-y: scroll;
-}
-
 .p.mb-0 {
     color: red;
 }
@@ -212,6 +217,10 @@ i {
 }
 
 .order-total { 
+    color: #15cfbc;
+}
+
+.comment-name {
     color: #15cfbc;
 }
 
@@ -255,6 +264,10 @@ footer {
 
 .social-links li:not(:last-child) {
     margin-right: 50px;
+}
+
+i {
+    color: #15cfbc;
 }
 
 /* -------------------------------- Media Queries */

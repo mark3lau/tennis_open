@@ -33,7 +33,7 @@ def edit_comment(request, pk):
             return redirect('comments')
     else:
         form = CommentForm(instance=comment)
-    return render(request, 'edit_comment.html', {'form': form})
+    return render(request, 'edit_comment.html', {'form': form, 'comment': comment})
 
 
 # For the user to post a comment

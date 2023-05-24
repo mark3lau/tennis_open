@@ -9,40 +9,6 @@
 <div class="container my-10 pb-5">
     <div class="row">
         <div class="col-md-6 my-5 p-3">
-            <h2>The Open Wall</h2>
-            <div id="comment-list">
-                {% for comment in comments %}
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ comment.user.username }}</h5>
-                        <p class="card-text">{{ comment.message }}</p>
-                        <p class="card-text"><small class="text-muted">{{ comment.created_at }}</small></p>
-
-                        {% if comment.user == request.user %}
-                       
-                            <form action="{% url 'edit_comment' comment.id %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit"
-                                    class="btn rounded-0 text-uppercase font-weight-bold mt-3 edit-comment" value="Edit"
-                                    data-comment-id="{{ comment.id }}">Edit</button>
-                            </form>
-                            <form action="{% url 'delete_comment' pk=comment.id %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit"
-                                    class="btn rounded-0 text-uppercase font-weight-bold mt-3 delete-comment"
-                                    value="Delete" data-comment-id="{{ comment.id }}">Delete</button>
-                            </form>
-                      
-                        {% endif %}
-                    </div>
-                </div>
-                {% empty %}
-                <p>No comments yet.</p>
-                {% endfor %}
-            </div>
-        </div>
-
-        <div class="col-md-6 my-5 p-3">
             {% if user.is_authenticated %}
             <h2>Post a Comment</h2>
             <form method="POST" id="comment-form">
@@ -53,6 +19,38 @@
             {% else %}
             <p>You must <a href="{% url 'account_login' %}?next={{ request.path }}">log in</a> to post a comment.</p>
             {% endif %}
+        </div>
+
+        <div class="col-md-6 my-5 p-3">
+            <h2>The Open Wall</h2>
+            <div id="comment-list">
+                {% for comment in comments reversed %}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold comment-name">{{ comment.user.username }}</h5>
+                        <p class="card-text">{{ comment.message }}</p>
+                        <p class="card-text"><small class="text-muted">{{ comment.created_at }}</small></p>
+
+                        {% if comment.user == request.user %}
+                            <div class="comment-actions">
+                                <form action="{% url 'edit_comment' comment.id %}?message={{ comment.message }}" method="post" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn rounded-0 font-weight-bold mt-3 p-1 edit-comment"
+                                        value="Edit" data-comment-id="{{ comment.id }}">Edit</button>
+                                </form>
+                                <form action="{% url 'delete_comment' pk=comment.id %}" method="post" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn rounded-0 font-weight-bold mt-3 p-1 delete-comment"
+                                        value="Delete" data-comment-id="{{ comment.id }}">Delete</button>
+                                </form>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% empty %}
+                <p>No comments yet.</p>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
