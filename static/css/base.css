@@ -32,7 +32,7 @@ h2 {
 /* Images */
 
 .hero-image {
-    background: url(https://res.cloudinary.com/dlvxdprfe/image/upload/v1685043375/two-tennis_players.jpg_zi4eij.jpg) no-repeat center center;
+    background: url("https://res.cloudinary.com/dlvxdprfe/image/upload/v1685043375/two-tennis_players.jpg_zi4eij.jpg") no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 80vh;
