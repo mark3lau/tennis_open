@@ -93,7 +93,8 @@ def checkout(request):
 
         # NEED TO REVIEW WHETHER TO MULTIPLY BY 100 IN STRIPE_TOTAL
         stripe_total = round(total * 100)
-        stripe.api_key = stripe_secret_key
+        print(stripe_secret_key)
+        stripe.api_key = stripe_secret_key 
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
