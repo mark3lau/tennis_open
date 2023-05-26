@@ -59,93 +59,112 @@ A profile page that allows registered users to view their purchases and orders.
 A contact form that allows users to contact the Tennis Open team to ask any questions.
 Functions allows users to edit and delete their comments on the Open Wall.
 A safety feature that only allows registered users to post comments.
+Messages for successes and errors that notify the user when an action has been executed.
 <hr>
 
 ## <u>3. Features</u>
 
-### **The Open Wall**
-A clear and simple home page that captures the look and feel of a high-end Asian-themed restaurant with a hero image in the middle. There's a description of the food at the restaurant and information around how users can find the restaurant and its opening times. 
-A navigation bar at the top allows users to view the menu in detail, register an account if they don't have one, or log-in if they do.
+### **Home Page**
+A home page that with a header that includes links to the main features of the site. Users can also view their account (if they have logged in) and also their shopping bag if they have added anything into it. A hero image shows what the site is about, with an overlayed register now button that disappears if a user has already logged in. A section stating what the club is all about, followed by quotes from members draws new users into the site. A form allows users to subscribe to a monthly newsletter using MailChimp, and at the bottom users can find the social links to the website's social platforms.
 
 ![home-page](static/screenshots/home-page.png "Home Page")
 
-### **Tennis and Fitness Lessons**
-Users can view the menu from the navigation bar in the header on a separate page, where the restaurant's starters, main and desserts are displayed.
+### **The Open Wall**
+A clear and simple comment wall that allows users to post comments and view them immediately on the 'wall' on the same page. Registered users can also edit and delete their comments but not other people's.
+![open-wall](static/screenshots/open-wall.png "Open Wall")
+![edit-comment](static/screenshots/edit-comment.png "Edit Comment")
 
-![home-page](static/screenshots/menu.png "Menu")
+### **Tennis and Fitness Lessons**
+Users can view the tennis and fitness lessons available, with clear borders defining each package and what the user gets and the cost. A highlighted 'Add to Bag' button allows users to add any packages they like into their shopping bag.
+
+![lessons](static/screenshots/lessons.png "Tennis and Fitness Lessons")
 
 ### **Contact Us Form**
-If the user does not have an account, they can click the Register button that takes them to the register an account page. Here they can create a username, email (optional), and password to register a new account.
+A simple contact us form allows users to input their name, email, contact number and their message to contact the Tennis Open team. Users will then be directed to a page confirming that the form has been successfully submitted.
 
-![register](static/screenshots/register.png "Register")
-
-### **Home Page**
-If the user already has an account, they can click the Sign-in button where they will be prompted to sign in with their registered username and password.
-
-![login](static/screenshots/login.png "Login")
-
-### **Profile Page**
-Once the user has logged in to their account, they can make a new reservation by entering in the details required in the form which includes: name, email, contact number, number of people, date and time.
-
-![make-a-booking](static/screenshots/make-a-booking.png "Make A Booking")
+![contact-us](static/screenshots/contact-us.png "Contact Us Form")
+![thanks-for-contacting](static/screenshots/thanks-for-contacting.png "Thanks For Contacting Us Page")
 
 ### **Register for an account**
-User can also view their bookings and have the ability to update and delete any existing bookings. To update their bookings, users will be taken to another page where the form reappears that allows them to edit that particular reservation and return them to the view bookings page.
+Unregistered users can register for a new account, if they have input the correct details they will be taken to a page that tells them to verify their email.
 
-![view-your-bookings](static/screenshots/view-your-bookings.png "View Your Bookings")
-![update-your-booking](static/screenshots/update-your-booking.png "Update Your Booking")
-![delete-booking](static/screenshots/delete-booking.png "Delete Booking")
+![register](static/screenshots/register.png "Register An Account")
+![verify-email](static/screenshots/verify-email.png "Verify Your Email Address")
 
 ### **Log in**
-Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+If users have already registered and are returning to the site, they can login to their account on the login page. If users have forgotten their password, they're taken to a password reset page asking for a verification of their email where they will be sent a link to update their password.
 
-![logout](static/screenshots/sign-out.png "Logout")
+![login](static/screenshots/login.png "Log In")
+![password-reset](static/screenshots/password-reset.png "Password Reset")
 
 ### **Log out**
-Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+Users who have already logged in and wish to log out of their account, can do so by clicking the log out button and a warning page double checks to make they would like to continue and log out.
 
-![logout](static/screenshots/sign-out.png "Logout")
+![logout](static/screenshots/logout.png "Log Out")
 
 ### **Shopping Bag**
-Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+Users can view items they have added on their shopping bag page, where it shows what's in their bag, the cost and whether they would like to continue shopping or checkout.
 
-![logout](static/screenshots/sign-out.png "Logout")
+![shopping-bag](static/screenshots/shopping-bag.png "Shopping Bag")
 
 ### **Checkout**
-Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+Once users have decided they want to continue to checkout and purchase the items in their bag, they are taken to a checkout page to fill in their delivery details and credit card details. If all details are correct and they confirm their order, they are taken to a confirmation page confirming their order, with their purchase details outlined and a confirmation number sent to their email address.
 
-![logout](static/screenshots/sign-out.png "Logout")
+![checkout](static/screenshots/checkout.png "Checkout")
+![confirmation-page](static/screenshots/confirmation-page.png "Confirmation Page")
+
+### **Profile Page**
+Once a user has logged in, they will be able to view their purchases in a profile page and click on their orders to view details on delivery and cost.
+
+![profile](static/screenshots/profile.png "Profile Page")
+
+### **Sitemap.xml**
+The sitemap.xml file provides a structured list of all the pages on your website, helping search engines crawl and index your content more effectively.
 
 <hr>
 
 ## <u>4. Future features</u>
 
-* ### **Warning messages**
-   To include a feature that flashes a warning message to users before they are about to update and delete a booking, and allows them to confirm or cancel the action.
+* ### **Tennis Courts bookings**
+   An added feature that allows users to book tennis courts. And an additional bonus would allow registered users priority booking on tennis courts versus users who haven't registered.
 
-* ### **Leave a review**
-   Once users have logged in, to allow them the ability to leave a review of the restaurant and their dining experience, and for this to be displayed on the home page for new and old users to view and comment on.
+* ### **Discounts**
+   A discount feature that allows users to get discounts on tennis lessons if sales are low, and/or discounts for long-term users who have been part of the site for a certain length of time.
 
-* ### **Block double bookings**
-   To allow the restaurant to block any double bookings at the same time for the same number of people. Or for the restaurant to specify how many tables are available at a certain time so that it blocks users from making a booking if the tables at the restaurant are full.
+* ### **Tennis Products for sale**
+   Sell tennis products such as tennis racquets, tennis balls, sweat bands and other apparel. 
+
+* ### **Like Button**
+   Allow registered users the chance to like other people's comments and increase the comaraderie of the Tennis Open community.
+
+* ### **Post Photos**
+   Allow users to post photos as well as comments on the wall. An additional feature could allow users to sell any second tennis products that they have on the Open Wall, making it a community market place.
+
+* ### **Management Page**
+   A feature to allow the superuser and management of the site to add additional packages and products through a dedicated page without going into the admin site.
 
 <hr>
 
-## <u>5. Color scheme</u>
-I used a mainly blue and red colour scheme with an easy-to-read grey for the text. The red colour is synonymous with Asian culture and symbolises luck and prosperity. The lighter blue adds a nice contrast and fits in with the wall-tile image that is part of the heading of the restaurant. 
+## <u>5. Facebook Page</u>
+I've created a dedicated Facebook page for this website for users to easily interact with the Tennis Open community. 
 
-![home-page](static/screenshots/home-page.png "Home Page")
+![facebook-page](static/screenshots/facebook-page.png "Tennis Open Facebook Page")
+
+## <u>6. Color scheme</u>
+I've used a few simple colours to keep the site as clean as possible, with the splash of turquoise green giving the site a bit of lift and colour. A grey colour for some of the text is preferred as it's easier to read and better on the eye. Other areas I've used black as it contrasts better with the turquoise colour than using the grey. A light blue and light pink colour are used for the edit and delete buttons to add an extra layer of colour to the page and highlight those functions.
+
+![open-wall](static/screenshots/open-wall.png "Open Wall")
 
 <hr>
 
-## <u>6. Lucidchart</u>
+## <u>7. Lucidchart</u>
 I used lucidchart to structure the restaurant website and its various functions. Taking in the user's journey from the home page through the various options of registering an account to loggin in, and the functions to make a booking, and then to view, update or delete their bookings.
 
 ![lucidchart](static/screenshots/lucidchart.png "Lucidchart")
 
 <hr>
 
-## <u>7. Technology</u>
+## <u>8. Technology</u>
 
 * <b>HTML:</b> Used to structure the content of my web pages and create the overall layout.
 
@@ -155,93 +174,94 @@ I used lucidchart to structure the restaurant website and its various functions.
 
 * <b>Python:</b> Used as the back-end programming language to handle server-side logic, including processing user input, interacting with my database, and generating dynamic content.
 
-* <b>Django:</b> A high-level Python framework used to build the back-end of the website, including handling requests and responses, managing database models, and rendering templates.
+* <b>Django:</b> Used to build the back-end of the website, including handling requests and responses, managing database models, and rendering templates.
 
 * <b>Bootstrap:</b> Used to create a responsive and mobile-friendly user interface, and to take advantage of its pre-built components and styles.
 
 * <b>ElephantSQL:</b> Used to manage and interact with the website's database, including querying data and updating records.
 
+* <b>Cloudinary:</b> A cloud-based media management platform that enables efficient storage, optimization, and delivery of images and videos for my website.
+
+* <b>Stripe:</b> A payment processing platform that allows my website to securely accept online payments from customers.
+
 * <b>Gitpod</b> was the application chosen to develop the site.
 
-* The site has been deployed on <b>Heroku</b>. 
+* <b>Heroku:</b> My site has been deployed on Heroku, a cloud platform that enables me to deploy, manage, and scale my web application easily and efficiently.
 
 <hr>
 
-## <u>8. Testing</u>
+## <u>9. Testing</u>
 
    ### **Code validation**
-   The code has been put through the [Python checker](https://www.pythonchecker.com//) and returned minor errors. Most errors contained lines of code that were longer than 79 characters and unnecessary white spaces which have been rectified.
+   Using Flake8 in the terminal, there were no major issues flagged in the code.
 
    The CSS code has been checked via the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors found.
 
    ### **Test cases**
 
-   * #### <u>Home Page and Menu</u>
-      The user is taken to the home page with details of the restaurant displayed. In the header, there are links to the 'Home' page, 'Menu', 'Register', and 'Login'.
-      In the footer there are 5 social media links for 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'LinkedIn'. 
-      A link to the menu takes the user to a menu page displaying the restaurant's starters, main and desserts. There is a prompt for the user to register an account if they don't have one already, or sign in to an existing account.
+   * #### <u>Test Cases for the Tennis Lessons and Bag Apps</u>
+      Test cases were done on the tennis lessons and bag apps to check that the user can view the packages on the page, check if the selected package has been added to the bag, and to check if the package has been added within the context.
 
-   * #### <u>Register An Account</u>
-      When the user clicks on the 'register' link, they're taken to a new page which prompts them to input details for 'username', 'email (optional)', 'password' and 'password (again)'. If any of these fields are not filled in or filled in incorrectly, a warning message flashes to fill the field in properly. 
-      If all fields have been filled in properly and the user clicks 'sign up', they're taken to the home page with a new navigation bar of options. 
-      They can view the 'Menu', 'Make a Booking, 'View Your Bookings' and 'Logout'.
+   * #### <u>The Open Wall</u>
+      An unregistered user would not be able to post any comments on the wall, a safety mechanism only allows users who have logged in to post comments.
+      A second feature only allows users to edit and delete their own comments, rather than any comments that have been posted on the wall.
 
-      ![register](static/screenshots/register-error-message.png "Register Error Message")
+      ![unregistered-user](static/screenshots/unregistered-open-wall.png "Unregistered User On The Open Wall")
+      ![open-wall](static/screenshots/open-wall.png "Users Can Only Edit And Delete Their Own Comments On The Open Wall")
+
+   * #### <u>Register button</u>
+      If a user has already logged in, they will not be shown the register now button which would have been confusing and counterproductive.
+
+      ![register-button-removal](static/screenshots/register-button-removal.png "Register Button Removed for Registered Users")
 
    * #### <u>Login</u>
       When the user clicks on the 'login' link, they're taken to a new page which prompts them to input details for 'username' and 'password'. There is also the option for a user to tick the 'Remember Me' box so that their device remembers their login details. Once they click Sign In, they're taken to the home page and their account.
 
-      ![login](static/screenshots/login-error-message.png "Login Error Message")
-
-   * #### <u>Make A Booking</u>
-      When the user is in the 'Make a Booking' page, input fields are displayed for 'Name', 'Email', 'Contact Number', 'Number of People', 'Booking Date' and 'Booking Time'. If any of these fields are not filled in or filled in incorrectly, a warning message flashes to fill the field in properly.
-      Once all fields have been filled in correctly and the user clicks submit, they're taken to the 'View Your Bookings' page with a success message of 'Your booking has been made successfully'.
-
-      ![make-a-booking](static/screenshots/make-a-booking-error-message.png "Make A Booking Error Message")
-
-   * #### <u>View Your Bookings</u>
-      In the 'View Your Bookings' page, the user's new booking will be displayed below which has two button options, one to 'Update' the booking, and one to 'Delete' the booking.
-      If a user clicks 'Update', they're taken to a new page with a new form to update the same information fields, and when the user clicks 'Submit', they're taken back to the 'View Your Bookings' page with their booking updated.
-      If a user clicks 'Delete', the booking will be deleted immediately and a success message will be displayed indicating which booking has been deleted.
+      ![login](static/screenshots/login.png "Login")
 
    * #### <u>Logout</u>
       If the user wishes to logout and click the 'Logout' link, they're taken to a new page that asks if the user is sure they want to log out and a 'Sign Out' button. If the 'Sign Out' is clicked, the user is logged out of their account and returned to the home page.
 
 
    ### **Fixed bugs**
-   * I had not added the '<int:pk>' path converter on my 'update_booking' and 'delete_booking' url paths which meant these pages were not rendering properly and were throwing up errors. These were fixed once the errors were identified.
+   * I had initially not included an if clause on the home page in the register button section, where registered users could still see the Register Now button, that was quickly resolved.
    
-   * In my model I had not included the foreignkey attribute for users and therefore every user could view the same bookings once a new booking was made.
+   * In the Open Wall, I hadn't initially included the int:pk in my urls for the edit and delete buttons and so they weren't linking up properly.
 
-   * In my UpdateBooking view, I hadn't included the primary key from the key word arguments object and therefore the user wasn't able to update their bookings properly as their bookings weren't being retrieved and was throwing an error. This was fixed once the issue had been identified.
+   * When it came to deployment, I had forgotten to add my Stripe Secret Key, Stripe Public Key and Web Hook Secret into my env.py file, and I had trouble deploying this onto heroku. This was rectified when these were included in my env.py file and in my heroku config vars.
 
    ### **Unfixed bugs**
    There are no known unfixed bugs.
    
 <hr>
 
-## <u>9. Deployment</u>
+## <u>10. Deployment</u>
 
    ### **Gitpod**
    The site was developed using Gitpod. In order to access the Gitpod workspace, follow the steps below:
    
-   1. In Github repository, select the mark3lau/baolau2 project.
+   1. In Github repository, select the mark3lau/tennis_open project.
    2. Click on the green Gitpod button near the top of the repository page, this will open the Gitpod workspace.
-   3. Inside the terminal, you can render the Baolau restaurant website in the browser by typing "python3 manage.py runserver".
+   3. Inside the terminal, you can render the Tennis Open website in the browser by typing "python3 manage.py runserver".
 
    ### **Heroku**
    The site was deployed to Heroku. The steps to deploy are as follows:
 
-   1. In the Heroku dashboard, click on the baolau2 app.
+   1. In the Heroku dashboard, click on the tennis-open app.
    2. Click on the 'Deploy' tab near the top of the page. 
    3. In the Deploy page, scroll down to the Manual deploy section. Choose the main branch to deploy, and click Deploy Branch. 
    4. Once the message 'Your app was successfully deployed' is displayed, click on the View button below. The app should now be running in a new tab.
 
 <hr>
 
-## <u>10. Credits</u>
+## <u>11. Credits</u>
 
-   ### **Harry Potter words**
-   The chinese-food image was taken from the [Park Chinois](https://parkchinois.com/) restaurant in Mayfair, London. It was part of their Chinese New Year offering.
-
-   The chinese-wall-tile image was taken from the [Deposit Photos website](https://depositphotos.com/95041990/stock-illustration-vintage-seamless-wall-tiles-of.html).
+   ### **Code**
+   The code to implement the stripe payment system, the checkout app and basic structure of the bag were taken from the Code Institute walk-through project Boutique Ado.
+   
+   ### **Images**
+   The images of the two tennis players and the tennis girl, both featured on the home page, were taken from [Unsplash](https://unsplash.com/s/photos/tennis).
+   
+   ### **Logo**
+   The logo of the website was designed using the free site [Canva](https://www.canva.com/logos/).
+   
