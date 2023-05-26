@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Package
 from django.contrib import messages
-from .forms import PackageForm
 
 
 def all_packages(request):

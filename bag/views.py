@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import messages
 from tennis_lessons.models import Package
-from django.views.decorators.http import require_POST
 
 
 def add_to_bag(request, package_id):

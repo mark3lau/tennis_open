@@ -358,4 +358,9 @@ i {
     body {
         height: calc(100vh - 116px);
     }
+
+    #mc_embed_signup {
+        width: 60%;
+    }
+
 }

@@ -7,7 +7,6 @@ from .models import Order, OrderLineItem
 from tennis_lessons.models import Package
 from profiles.models import UserProfile
 
-import json
 import time
 
 

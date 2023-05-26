@@ -79,8 +79,7 @@ def checkout(request):
 
         else:
             messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
-                        
+                Please double check your information.')                        
     else:
 
         bag = request.session.get('bag', {})
@@ -94,7 +93,7 @@ def checkout(request):
         # NEED TO REVIEW WHETHER TO MULTIPLY BY 100 IN STRIPE_TOTAL
         stripe_total = round(total * 100)
         print(stripe_secret_key)
-        stripe.api_key = stripe_secret_key 
+        stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
