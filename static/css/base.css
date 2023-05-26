@@ -326,7 +326,6 @@ i {
 	color: #17a2b8; /* text-info */
 }
 
-
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
@@ -358,9 +357,15 @@ i {
     body {
         height: calc(100vh - 116px);
     }
+}
 
+@media (max-width: 390px) {
     #mc_embed_signup {
-        width: 60%;
+      width: 100%;
+      margin: 10px;
     }
 
-}
+    #mc_embed_signup form {
+      padding: 10px;
+    }
+  }

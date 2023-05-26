@@ -1,75 +1,117 @@
-# **BAOLAU RESTAURANT**
+# **TENNIS OPEN**
 
 ## <u>1. Introduction</u>
-In this project, the objective was to build a Full-Stack site based on business logic used to control a centrally-owned dataset. I will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
-I decided to create a website for a Chinese restaurant called Baolau. The restaurant will allow users to register an account and log-in in the future once they've registered. They will also have the ability to make, view, update and delete their bookings. It will also contain information about the restaurant and a menu showcasing their cuisine.
-This website is built for people who love Chinese cuisine and are interested in trying out the Baolau restaurant and making a booking for a dining experience.
+In this project, the objective was to build a Full-Stack site based on business logic used to control a centrally-owned dataset. I will set up an authentication mechanism and provide paid access to the site's data.
+I've created a website for a tennis club community based in London called Tennis Open. The site allows users to register an account with the site, purchase tennis lessons and tennis-based fitness session and be part of a community posting comments about their experiences on an 'Open Wall'. Additional features include a contact form that allows users to contact the Tennis Open team to ask any questions, as well as sign up to a monthly newsletter.
 <hr>
 
 ## <u>2. User Stories</u>
-As a user I want to be able to view the information about the restaurant and understand instantly what the cuisine is, the ethos of the restaurant and where I can find the restaurant.
 
-I want to be able to view the menu of the restaurant so I can understand the food that's on offer.
+### As a site user, I want to be able to:
 
-I want to be able to register an account so that I can make bookings at the restaurant.
+* Read about what the website is about.
 
-I want to log in and log out of my account with ease.
+* View the tennis and fitness lessons available to purchase.
 
-I want to be able to view, update and delete my bookings once I've logged in.
+* Register for an account.
+
+* Access social links of the website.
+
+* Subscribe to a newsletter.
+
+* View the comments on the Open Wall.
+
+* Fill out a contact form to find out more about the club.
+
+### As a registered user, I want to be able to:
+
+* View other people's comments, but won't be able to make any changes to their comments.
+
+* Post comments, and edit and delete my comments on the wall.
+
+* View the orders I've made in a profile page.
+
+* See what I've purchased once I've paid, and get a confirmation sent to my email with a confirmation number.
+
+* View what I'm purchasing before I pay.
+
+* Checkout my bag when I'm ready, and be able to make a payment through an easy to follow form.
+
+* View my bag and remove any items I don't want and to keep shopping if I want to select other items.
+
+* Add tennis and fitness lessons to my bag.
+
+* Log out of my account.
+
+* Easily log in to my account.
 
 * ### **End user goal** 
-I want to be excited by the restaurant and its food, and be able to register an account so I can make bookings at the restaurant. I want to be able to easily log in and out and view, update and delete my bookings.
+I want to be able to join an exciting tennis club that allows me to purchase tennis and fitness lessons easily, and be part of an online community sharing our experiences.
 
 * ### **Acceptance criteria**
-A clear home page describing the ethos of the restaurant and where you can find the restaurant.
-A navigation bar with options to view the menu and register or log-in as a user.
-A registration function for new users to register an account and a log-in function for old users.
-Once logged-in, users should be able to make a reservation, view all their bookings, update existing bookings, and delete bookings.
+A fully functioning payment system using Stripe, that allows users to make purchases and receive automated confirmation emails.
+An authentication system that allows to register an account, log in and log out of their personal account.
+A page that allows users to post comments and communicate with each and share their experiences.
+A subscription service that allows users to subscribe to a service using MailChimp.
 
 * ### **Measurement of success**
-Registration should be a simple process with no more than 5 lines of information required.
-Users should be able to log in and log out of their account with ease, with warning messages before confirming their log-out.
-Messages should display to users when they are logged-in, updating and deleting their bookings.
-Users should have all the necessary fields of information required to make a reservation that is useful to the restaurant.
-All fields in forms should be filled out and users should be allowed to progress unless all fields have been completed.
+A profile page that allows registered users to view their purchases and orders.
+A contact form that allows users to contact the Tennis Open team to ask any questions.
+Functions allows users to edit and delete their comments on the Open Wall.
+A safety feature that only allows registered users to post comments.
 <hr>
 
 ## <u>3. Features</u>
 
-### **Home page and restaurant information**
+### **The Open Wall**
 A clear and simple home page that captures the look and feel of a high-end Asian-themed restaurant with a hero image in the middle. There's a description of the food at the restaurant and information around how users can find the restaurant and its opening times. 
 A navigation bar at the top allows users to view the menu in detail, register an account if they don't have one, or log-in if they do.
 
 ![home-page](static/screenshots/home-page.png "Home Page")
 
-### **Menu**
+### **Tennis and Fitness Lessons**
 Users can view the menu from the navigation bar in the header on a separate page, where the restaurant's starters, main and desserts are displayed.
 
 ![home-page](static/screenshots/menu.png "Menu")
 
-### **Register an account**
+### **Contact Us Form**
 If the user does not have an account, they can click the Register button that takes them to the register an account page. Here they can create a username, email (optional), and password to register a new account.
 
 ![register](static/screenshots/register.png "Register")
 
-### **Log in to your account**
+### **Home Page**
 If the user already has an account, they can click the Sign-in button where they will be prompted to sign in with their registered username and password.
 
 ![login](static/screenshots/login.png "Login")
 
-### **Make a booking**
+### **Profile Page**
 Once the user has logged in to their account, they can make a new reservation by entering in the details required in the form which includes: name, email, contact number, number of people, date and time.
 
 ![make-a-booking](static/screenshots/make-a-booking.png "Make A Booking")
 
-### **View, Update and Delete your bookings**
+### **Register for an account**
 User can also view their bookings and have the ability to update and delete any existing bookings. To update their bookings, users will be taken to another page where the form reappears that allows them to edit that particular reservation and return them to the view bookings page.
 
 ![view-your-bookings](static/screenshots/view-your-bookings.png "View Your Bookings")
 ![update-your-booking](static/screenshots/update-your-booking.png "Update Your Booking")
 ![delete-booking](static/screenshots/delete-booking.png "Delete Booking")
 
-### **Logout**
+### **Log in**
+Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+
+![logout](static/screenshots/sign-out.png "Logout")
+
+### **Log out**
+Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+
+![logout](static/screenshots/sign-out.png "Logout")
+
+### **Shopping Bag**
+Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+
+![logout](static/screenshots/sign-out.png "Logout")
+
+### **Checkout**
 Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
 
 ![logout](static/screenshots/sign-out.png "Logout")
