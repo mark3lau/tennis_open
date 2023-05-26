@@ -1,108 +1,205 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **BAOLAU RESTAURANT**
 
-Welcome mark3lau,
+## <u>1. Introduction</u>
+In this project, the objective was to build a Full-Stack site based on business logic used to control a centrally-owned dataset. I will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
+I decided to create a website for a Chinese restaurant called Baolau. The restaurant will allow users to register an account and log-in in the future once they've registered. They will also have the ability to make, view, update and delete their bookings. It will also contain information about the restaurant and a menu showcasing their cuisine.
+This website is built for people who love Chinese cuisine and are interested in trying out the Baolau restaurant and making a booking for a dining experience.
+<hr>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## <u>2. User Stories</u>
+As a user I want to be able to view the information about the restaurant and understand instantly what the cuisine is, the ethos of the restaurant and where I can find the restaurant.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+I want to be able to view the menu of the restaurant so I can understand the food that's on offer.
 
-## Gitpod Reminders
+I want to be able to register an account so that I can make bookings at the restaurant.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+I want to log in and log out of my account with ease.
 
-`python3 -m http.server`
+I want to be able to view, update and delete my bookings once I've logged in.
 
-A blue button should appear to click: _Make Public_,
+* ### **End user goal** 
+I want to be excited by the restaurant and its food, and be able to register an account so I can make bookings at the restaurant. I want to be able to easily log in and out and view, update and delete my bookings.
 
-Another blue button should appear to click: _Open Browser_.
+* ### **Acceptance criteria**
+A clear home page describing the ethos of the restaurant and where you can find the restaurant.
+A navigation bar with options to view the menu and register or log-in as a user.
+A registration function for new users to register an account and a log-in function for old users.
+Once logged-in, users should be able to make a reservation, view all their bookings, update existing bookings, and delete bookings.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* ### **Measurement of success**
+Registration should be a simple process with no more than 5 lines of information required.
+Users should be able to log in and log out of their account with ease, with warning messages before confirming their log-out.
+Messages should display to users when they are logged-in, updating and deleting their bookings.
+Users should have all the necessary fields of information required to make a reservation that is useful to the restaurant.
+All fields in forms should be filled out and users should be allowed to progress unless all fields have been completed.
+<hr>
 
-A blue button should appear to click: _Make Public_,
+## <u>3. Features</u>
 
-Another blue button should appear to click: _Open Browser_.
+### **Home page and restaurant information**
+A clear and simple home page that captures the look and feel of a high-end Asian-themed restaurant with a hero image in the middle. There's a description of the food at the restaurant and information around how users can find the restaurant and its opening times. 
+A navigation bar at the top allows users to view the menu in detail, register an account if they don't have one, or log-in if they do.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![home-page](static/screenshots/home-page.png "Home Page")
 
-To log into the Heroku toolbelt CLI:
+### **Menu**
+Users can view the menu from the navigation bar in the header on a separate page, where the restaurant's starters, main and desserts are displayed.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![home-page](static/screenshots/menu.png "Menu")
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### **Register an account**
+If the user does not have an account, they can click the Register button that takes them to the register an account page. Here they can create a username, email (optional), and password to register a new account.
 
-------
+![register](static/screenshots/register.png "Register")
 
-## Release History
+### **Log in to your account**
+If the user already has an account, they can click the Sign-in button where they will be prompted to sign in with their registered username and password.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![login](static/screenshots/login.png "Login")
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### **Make a booking**
+Once the user has logged in to their account, they can make a new reservation by entering in the details required in the form which includes: name, email, contact number, number of people, date and time.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![make-a-booking](static/screenshots/make-a-booking.png "Make A Booking")
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### **View, Update and Delete your bookings**
+User can also view their bookings and have the ability to update and delete any existing bookings. To update their bookings, users will be taken to another page where the form reappears that allows them to edit that particular reservation and return them to the view bookings page.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![view-your-bookings](static/screenshots/view-your-bookings.png "View Your Bookings")
+![update-your-booking](static/screenshots/update-your-booking.png "Update Your Booking")
+![delete-booking](static/screenshots/delete-booking.png "Delete Booking")
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### **Logout**
+Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![logout](static/screenshots/sign-out.png "Logout")
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<hr>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## <u>4. Future features</u>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* ### **Warning messages**
+   To include a feature that flashes a warning message to users before they are about to update and delete a booking, and allows them to confirm or cancel the action.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* ### **Leave a review**
+   Once users have logged in, to allow them the ability to leave a review of the restaurant and their dining experience, and for this to be displayed on the home page for new and old users to view and comment on.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* ### **Block double bookings**
+   To allow the restaurant to block any double bookings at the same time for the same number of people. Or for the restaurant to specify how many tables are available at a certain time so that it blocks users from making a booking if the tables at the restaurant are full.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<hr>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## <u>5. Color scheme</u>
+I used a mainly blue and red colour scheme with an easy-to-read grey for the text. The red colour is synonymous with Asian culture and symbolises luck and prosperity. The lighter blue adds a nice contrast and fits in with the wall-tile image that is part of the heading of the restaurant. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![home-page](static/screenshots/home-page.png "Home Page")
 
-------
+<hr>
 
-## FAQ about the uptime script
+## <u>6. Lucidchart</u>
+I used lucidchart to structure the restaurant website and its various functions. Taking in the user's journey from the home page through the various options of registering an account to loggin in, and the functions to make a booking, and then to view, update or delete their bookings.
 
-**Why have you added this script?**
+![lucidchart](static/screenshots/lucidchart.png "Lucidchart")
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<hr>
 
-**How will this affect me?**
+## <u>7. Technology</u>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* <b>HTML:</b> Used to structure the content of my web pages and create the overall layout.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+* <b>CSS:</b> Used to style and customize the appearance of my web pages, including the colors, fonts, and layout.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+* <b>JavaScript:</b> Used to add interactivity to my web pages, such as form validation and animations.
 
-**So….?**
+* <b>Python:</b> Used as the back-end programming language to handle server-side logic, including processing user input, interacting with my database, and generating dynamic content.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* <b>Django:</b> A high-level Python framework used to build the back-end of the website, including handling requests and responses, managing database models, and rendering templates.
 
-**Can I opt out?**
+* <b>Bootstrap:</b> Used to create a responsive and mobile-friendly user interface, and to take advantage of its pre-built components and styles.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* <b>ElephantSQL:</b> Used to manage and interact with the website's database, including querying data and updating records.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* <b>Gitpod</b> was the application chosen to develop the site.
 
-**Anything more?**
+* The site has been deployed on <b>Heroku</b>. 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<hr>
 
----
+## <u>8. Testing</u>
 
-Happy coding!
+   ### **Code validation**
+   The code has been put through the [Python checker](https://www.pythonchecker.com//) and returned minor errors. Most errors contained lines of code that were longer than 79 characters and unnecessary white spaces which have been rectified.
+
+   The CSS code has been checked via the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors found.
+
+   ### **Test cases**
+
+   * #### <u>Home Page and Menu</u>
+      The user is taken to the home page with details of the restaurant displayed. In the header, there are links to the 'Home' page, 'Menu', 'Register', and 'Login'.
+      In the footer there are 5 social media links for 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'LinkedIn'. 
+      A link to the menu takes the user to a menu page displaying the restaurant's starters, main and desserts. There is a prompt for the user to register an account if they don't have one already, or sign in to an existing account.
+
+   * #### <u>Register An Account</u>
+      When the user clicks on the 'register' link, they're taken to a new page which prompts them to input details for 'username', 'email (optional)', 'password' and 'password (again)'. If any of these fields are not filled in or filled in incorrectly, a warning message flashes to fill the field in properly. 
+      If all fields have been filled in properly and the user clicks 'sign up', they're taken to the home page with a new navigation bar of options. 
+      They can view the 'Menu', 'Make a Booking, 'View Your Bookings' and 'Logout'.
+
+      ![register](static/screenshots/register-error-message.png "Register Error Message")
+
+   * #### <u>Login</u>
+      When the user clicks on the 'login' link, they're taken to a new page which prompts them to input details for 'username' and 'password'. There is also the option for a user to tick the 'Remember Me' box so that their device remembers their login details. Once they click Sign In, they're taken to the home page and their account.
+
+      ![login](static/screenshots/login-error-message.png "Login Error Message")
+
+   * #### <u>Make A Booking</u>
+      When the user is in the 'Make a Booking' page, input fields are displayed for 'Name', 'Email', 'Contact Number', 'Number of People', 'Booking Date' and 'Booking Time'. If any of these fields are not filled in or filled in incorrectly, a warning message flashes to fill the field in properly.
+      Once all fields have been filled in correctly and the user clicks submit, they're taken to the 'View Your Bookings' page with a success message of 'Your booking has been made successfully'.
+
+      ![make-a-booking](static/screenshots/make-a-booking-error-message.png "Make A Booking Error Message")
+
+   * #### <u>View Your Bookings</u>
+      In the 'View Your Bookings' page, the user's new booking will be displayed below which has two button options, one to 'Update' the booking, and one to 'Delete' the booking.
+      If a user clicks 'Update', they're taken to a new page with a new form to update the same information fields, and when the user clicks 'Submit', they're taken back to the 'View Your Bookings' page with their booking updated.
+      If a user clicks 'Delete', the booking will be deleted immediately and a success message will be displayed indicating which booking has been deleted.
+
+   * #### <u>Logout</u>
+      If the user wishes to logout and click the 'Logout' link, they're taken to a new page that asks if the user is sure they want to log out and a 'Sign Out' button. If the 'Sign Out' is clicked, the user is logged out of their account and returned to the home page.
+
+
+   ### **Fixed bugs**
+   * I had not added the '<int:pk>' path converter on my 'update_booking' and 'delete_booking' url paths which meant these pages were not rendering properly and were throwing up errors. These were fixed once the errors were identified.
+   
+   * In my model I had not included the foreignkey attribute for users and therefore every user could view the same bookings once a new booking was made.
+
+   * In my UpdateBooking view, I hadn't included the primary key from the key word arguments object and therefore the user wasn't able to update their bookings properly as their bookings weren't being retrieved and was throwing an error. This was fixed once the issue had been identified.
+
+   ### **Unfixed bugs**
+   There are no known unfixed bugs.
+   
+<hr>
+
+## <u>9. Deployment</u>
+
+   ### **Gitpod**
+   The site was developed using Gitpod. In order to access the Gitpod workspace, follow the steps below:
+   
+   1. In Github repository, select the mark3lau/baolau2 project.
+   2. Click on the green Gitpod button near the top of the repository page, this will open the Gitpod workspace.
+   3. Inside the terminal, you can render the Baolau restaurant website in the browser by typing "python3 manage.py runserver".
+
+   ### **Heroku**
+   The site was deployed to Heroku. The steps to deploy are as follows:
+
+   1. In the Heroku dashboard, click on the baolau2 app.
+   2. Click on the 'Deploy' tab near the top of the page. 
+   3. In the Deploy page, scroll down to the Manual deploy section. Choose the main branch to deploy, and click Deploy Branch. 
+   4. Once the message 'Your app was successfully deployed' is displayed, click on the View button below. The app should now be running in a new tab.
+
+<hr>
+
+## <u>10. Credits</u>
+
+   ### **Harry Potter words**
+   The chinese-food image was taken from the [Park Chinois](https://parkchinois.com/) restaurant in Mayfair, London. It was part of their Chinese New Year offering.
+
+   The chinese-wall-tile image was taken from the [Deposit Photos website](https://depositphotos.com/95041990/stock-illustration-vintage-seamless-wall-tiles-of.html).
