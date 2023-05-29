@@ -133,6 +133,7 @@ h2 {
     min-width: 260px;
 }
 
+.subscribe-button,
 .btn-black,
 .submit-btn {
     background: #15cfbc;
@@ -159,6 +160,7 @@ h2 {
     color: #FFB6C1 !important;
 }
 
+.subscribe-button:hover,
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {

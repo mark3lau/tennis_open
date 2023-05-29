@@ -158,9 +158,18 @@ I've used a few simple colours to keep the site as clean as possible, with the s
 <hr>
 
 ## <u>7. Lucidchart</u>
-I used lucidchart to structure the restaurant website and its various functions. Taking in the user's journey from the home page through the various options of registering an account to loggin in, and the functions to make a booking, and then to view, update or delete their bookings.
+I used lucidchart to structure the layout of my website and its various pages and functions. Starting the user's journey on the home page, we first identify the navigation bar options:
 
-![lucidchart](static/screenshots/lucidchart.png "Lucidchart")
+1. About Our Community
+2. The Open Wall
+3. Tennis and Fitness Lessons
+4. Contact Us
+
+We go through the various pages and options that the user has on each page, through to the shopping bag, checkout and confirmation pages.
+
+It helped to visualize and problem solve some of the issues I may have encountered and identified the areas where additional code was needed to better serve the user.
+
+![lucidchart](static/screenshots/tennisopen-lucidchart.png "Lucidchart")
 
 <hr>
 
@@ -193,9 +202,9 @@ I used lucidchart to structure the restaurant website and its various functions.
 ## <u>9. Testing</u>
 
    ### **Code validation**
-   Using Flake8 in the terminal, there were no major issues flagged in the code.
+   1. Using Flake8 in the terminal, there were no major issues flagged in the code.
 
-   The CSS code has been checked via the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors found.
+   2. The CSS code has been checked via the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors found.
 
    ### **Test cases**
 
