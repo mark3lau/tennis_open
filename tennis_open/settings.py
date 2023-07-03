@@ -28,10 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['tennis-open.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = ['localhost', 'tennis-open.herokuapp.com', '8000-mark3lau-tennisopen-i4m1w0jrsqn.ws-eu101.gitpod.io']
 
 # Application definition
 
