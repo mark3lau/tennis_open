@@ -1,9 +1,10 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-
-
-# Test cases for Models
-
+from django.contrib.auth.models import User
+from django_countries.fields import Country
+from .models import Order, OrderLineItem
+from tennis_lessons.models import Package
+from profiles.models import UserProfile
 
 
 # Test cases for Views
@@ -77,3 +78,90 @@ def test_checkout_unsuccessful(self):
         self.assertEqual(response.status_code, 200)
         # Assert that the checkout success page loads successfully and necessary context variables are present.
 
+
+# Test cases for Models
+
+
+class OrderModelTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', password='testpassword')
+        self.user_profile = UserProfile.objects.create(user=self.user, default_phone_number='123456789',
+                                                       default_country=Country('US'), default_town_or_city='Test City',
+                                                       default_street_address1='Test Street 1')
+        self.order = Order.objects.create(
+            user_profile=self.user_profile,
+            full_name='John Doe',
+            email='johndoe@example.com',
+            phone_number='987654321',
+            country=Country('GB'),
+            postcode='SW1A 1AA',
+            town_or_city='London',
+            street_address1='123 Test Street',
+            street_address2='Unit 45',
+            county='Test County',
+            order_total=100,
+            original_bag='Test bag content',
+            stripe_pid='ch_1234567890',
+        )
+
+    def test_order_model_str(self):
+        self.assertEqual(str(self.order), self.order.order_number)
+
+    def test_order_model_generate_order_number(self):
+        order = Order.objects.create(
+            user_profile=self.user_profile,
+            full_name='Test User',
+            email='test@example.com',
+            phone_number='123456789',
+            country=Country('US'),
+            town_or_city='Test City',
+            street_address1='Test Street 1',
+        )
+        self.assertIsNotNone(order.order_number)
+
+    def test_order_model_update_total(self):
+        package = Package.objects.create(name='Test Package', price=50)
+        order_line_item = OrderLineItem.objects.create(order=self.order, package=package)
+        self.order.update_total()
+        self.assertEqual(self.order.order_total, 50)
+
+    def test_order_model_save_method(self):
+        order = Order(
+            user_profile=self.user_profile,
+            full_name='Test User',
+            email='test@example.com',
+            phone_number='123456789',
+            country=Country('US'),
+            town_or_city='Test City',
+            street_address1='Test Street 1',
+        )
+        order.save()
+        self.assertIsNotNone(order.order_number)
+
+
+class OrderLineItemModelTestCase(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', password='testpassword')
+        self.user_profile = UserProfile.objects.create(user=self.user, default_phone_number='123456789',
+                                                       default_country=Country('US'), default_town_or_city='Test City',
+                                                       default_street_address1='Test Street 1')
+        self.order = Order.objects.create(
+            user_profile=self.user_profile,
+            full_name='John Doe',
+            email='johndoe@example.com',
+            phone_number='987654321',
+            country=Country('GB'),
+            postcode='SW1A 1AA',
+            town_or_city='London',
+            street_address1='123 Test Street',
+            street_address2='Unit 45',
+            county='Test County',
+            order_total=100,
+            original_bag='Test bag content',
+            stripe_pid='ch_1234567890',
+        )
+        self.package = Package.objects.create(name='Test Package', price=50)
+        self.order_line_item = OrderLineItem.objects.create(order=self.order, package=self.package)
+
+    def test_order_line_item_model_save_method(self):
+        self.assertEqual(self.order_line_item.lineitem_total, 50)
