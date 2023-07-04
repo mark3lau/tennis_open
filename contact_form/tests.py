@@ -32,8 +32,6 @@ class ContactFormTestCase(TestCase):
 
 
 # Test cases for Models
-
-
 class ContactModelTestCase(TestCase):
     def setUp(self):
         self.contact = Contact.objects.create(
@@ -54,8 +52,6 @@ class ContactModelTestCase(TestCase):
 
 
 # Test cases for Views
-
-
 class ContactViewTestCase(TestCase):
     def setUp(self):
         self.factory = RequestFactory()

@@ -8,7 +8,6 @@ from profiles.models import UserProfile
 
 
 # Test cases for Views
-
 class CheckoutTestCase(TestCase):
     def setUp(self):
         self.client = Client()
@@ -70,7 +69,6 @@ def test_checkout_unsuccessful(self):
     self.assertFormError(response, 'order_form', 'full_name', 'This field is required.')
     # Assert that the user is shown an error message for the 'full_name' field when no data is provided.
 
-
     def test_checkout_success(self):
         order_number = 'test_order_number'
         url = reverse('checkout_success', args=[order_number])
@@ -80,8 +78,6 @@ def test_checkout_unsuccessful(self):
 
 
 # Test cases for Models
-
-
 class OrderModelTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='testuser', password='testpassword')

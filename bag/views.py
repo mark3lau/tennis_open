@@ -29,12 +29,9 @@ def remove_from_bag(request, package_id):
 
     package = Package.objects.get(pk=package_id)
     bag = request.session.get('bag', {})
-    
     if package_id in bag:
         bag.pop(package_id)
         messages.success(request, f'Removed {package.name} from your bag')
 
     request.session['bag'] = bag
     return HttpResponse(status=200)
-
-

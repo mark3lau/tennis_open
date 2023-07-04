@@ -91,7 +91,7 @@
         var url = `/bag/remove/${packageID}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken
-        }
+        };
 
         $.post(url, data)
             .done(function () {

@@ -26,5 +26,3 @@ class BagViewsTestCase(TestCase):
         self.assertEqual(response.status_code, 200)  # Successful response
         self.assertEqual(len(get_messages(response.wsgi_request)), 1)  # Check success message
         self.assertIn(f'Removed {self.package.name} from your bag', str(get_messages(response.wsgi_request)))
-
-

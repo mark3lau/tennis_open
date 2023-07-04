@@ -6,7 +6,6 @@ from .forms import CommentForm
 
 
 # Test cases for Models
-
 class CommentModelTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='testuser', password='testpassword')
@@ -30,9 +29,7 @@ class CommentModelTestCase(TestCase):
         self.assertNotEqual(self.comment.updated_at, old_updated_at)
 
 
-
 # Test cases for Views
-
 class CommentViewsTestCase(TestCase):
     def setUp(self):
         self.client = Client()

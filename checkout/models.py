@@ -66,6 +66,3 @@ class OrderLineItem(models.Model):
         """
         self.lineitem_total = self.package.price
         super().save(*args, **kwargs)
-
-    # def __str__(self):
-    #     return self.order_number

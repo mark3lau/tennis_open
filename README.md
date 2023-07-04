@@ -257,7 +257,45 @@ It helped to visualize and problem solve some of the issues I may have encounter
    
 <hr>
 
-## <u>10. Deployment</u>
+## <u>10. Running Locally</u>
+
+Prerequisites
+* Python 3.8.11
+
+Installation
+1. Clone the Github repo to the desired location on your computer.
+   ```sh
+   git clone git@github.com:mark3lau/the-chocolate-factory.git
+   cd the-chocolate-factory
+   ```
+2. Create and run a Python virtual environment in terminal.
+   ```sh
+   python3 -m venv env
+   . env/bin/activate
+   ```
+3. Install the Python dependencies from `requirements.txt`.
+   ```sh
+   pip3 install -r requirements.txt
+   ```
+4. Create an `env.py` based on the `sample-env.py` file.
+   1. Create and add a [Django secret key](https://django-secret-key-generator.netlify.app/).
+   2. If you'd like to test checkout payments, you'll need a [Stripe account](https://stripe.com/en-gb).
+   3. If you'd like to test newsletter functionality, you'll need a [Mailchimp account](https://mailchimp.com/).
+5. Make migrations to prepare the database. This will create a `db.sqlite3` in the root. Remove the flags when happy to proceed.
+   ```sh
+   python3 manage.py makemigrations --dry-run
+   python3 manage.py migrate --plan
+   ```
+6. Create a new superuser.
+   ```sh
+   python3 manage.py createsuperuser
+   ```
+7. Run the site locally.
+   ```sh
+   python3 manage.py runserver
+   ```
+
+## <u>11. Deployment</u>
 
    ### **Gitpod**
    The site was developed using Gitpod. In order to access the Gitpod workspace, follow the steps below:
@@ -276,7 +314,7 @@ It helped to visualize and problem solve some of the issues I may have encounter
 
 <hr>
 
-## <u>11. Credits</u>
+## <u>12. Credits</u>
 
    ### **Code**
    The code to implement the stripe payment system, the checkout app and basic structure of the bag were taken from the Code Institute walk-through project Boutique Ado.
