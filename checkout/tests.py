@@ -63,7 +63,7 @@ def test_checkout_unsuccessful(self):
     # Assert that the user is shown an error message for the 'full_name' field.
 
     # Test for scenarios where the form data is not provided at all.
-    
+
     response = self.client.post(url, {})
     self.assertEqual(response.status_code, 200)
     self.assertFormError(response, 'order_form', 'full_name', 'This field is required.')

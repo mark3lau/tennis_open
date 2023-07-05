@@ -13,16 +13,16 @@ class CommentModelTestCase(TestCase):
 
     def test_comment_model_str(self):
         self.assertEqual(str(self.comment), f'Comment by {self.user.username} on {self.comment.created_at}')
-    
+
     def test_comment_model_fields(self):
         self.assertEqual(self.comment.user, self.user)
         self.assertEqual(self.comment.message, 'Test comment')
-    
+
     def test_comment_model_created_at_auto_now_add(self):
         old_created_at = self.comment.created_at
         self.comment.save()
         self.assertEqual(self.comment.created_at, old_created_at)
-    
+
     def test_comment_model_updated_at_auto_now(self):
         old_updated_at = self.comment.updated_at
         self.comment.save()

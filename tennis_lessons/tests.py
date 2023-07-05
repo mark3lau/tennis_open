@@ -2,6 +2,8 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.messages import get_messages
 from .models import Package
+from tennis_lessons.models import Lesson, Package
+from tennis_lessons.forms import PackageForm
 
 
 # Test cases for Models
@@ -39,7 +41,6 @@ class PackageModelTestCase(TestCase):
         self.assertEqual(str(self.package), 'Package 1')
 
 
-
 # Test cases for Views
 
 class AllPackagesViewTestCase(TestCase):
@@ -71,12 +72,6 @@ class AllPackagesViewTestCase(TestCase):
 
 
 # Test cases for forms
-
-
-from django.test import TestCase
-from tennis_lessons.models import Lesson, Package
-from tennis_lessons.forms import PackageForm
-
 
 class PackageFormTestCase(TestCase):
     def setUp(self):

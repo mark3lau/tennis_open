@@ -55,7 +55,6 @@ class UserProfileModelTestCase(TestCase):
         self.assertEqual(updated_profile.user, user)
 
 
-
 # Test cases for Views
 
 class ProfileViewTestCase(TestCase):

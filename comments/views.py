@@ -68,7 +68,7 @@ class EditComment(UpdateView):
 
     def get_object(self, queryset=None):
         comment_id = self.kwargs['pk']
-        return Comment.objects.get(pk=comment_id) 
+        return Comment.objects.get(pk=comment_id)
 
 
 # For the user to delete a comment

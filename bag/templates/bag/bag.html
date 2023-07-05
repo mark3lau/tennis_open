@@ -27,18 +27,21 @@
                             <th>Price</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         {% for bag_item in bag_items %}
-                        <tr>
-                            <td>{{ bag_item.name }}</td>
-                            <td>£{{ bag_item.price }}</td>
-                            <td>
-                                <a class="remove-item text-danger float-right"
-                                    id="remove_{{ bag_item.package_id}}"><small>Remove</small></a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>{{ bag_item.name }}</td>
+                                <td>£{{ bag_item.price }}</td>
+                                <td>
+                                    <a class="remove-item text-danger float-right"
+                                        id="remove_{{ bag_item.package_id}}"><small>Remove</small>
+                                    </a>
+                                </td>
+                            </tr>
                         {% endfor %}
                     </tbody>
+                    
                     <tfoot>
                         <tr>
                             <th>Total</th>
