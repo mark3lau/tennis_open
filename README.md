@@ -3,6 +3,7 @@
 ## <u>1. Introduction</u>
 In this project, the objective was to build a Full-Stack site based on business logic used to control a centrally-owned dataset. I will set up an authentication mechanism and provide paid access to the site's data.
 I've created a website for a tennis club community based in London called Tennis Open. The site allows users to register an account with the site, purchase tennis lessons and tennis-based fitness session and be part of a community posting comments about their experiences on an 'Open Wall'. Additional features include a contact form that allows users to contact the Tennis Open team to ask any questions, as well as sign up to a monthly newsletter.
+
 <hr>
 
 ## <u>2. User Stories</u>
@@ -60,9 +61,33 @@ A contact form that allows users to contact the Tennis Open team to ask any ques
 Functions allows users to edit and delete their comments on the Open Wall.
 A safety feature that only allows registered users to post comments.
 Messages for successes and errors that notify the user when an action has been executed.
+
 <hr>
 
-## <u>3. Features</u>
+## <u>3. Agile Development, E-commerce Business Model and Marketing Strategy</u>
+Tennis Open, an e-commerce platform dedicated to tennis and fitness lessons, embraces an innovative business model that incorporates effective marketing strategies while keeping SEO in mind. With its name, Tennis Open cleverly integrates SEO thinking by leveraging the term "open," synonymous with prestigious tennis Grand Slam tournaments, to optimize search results on platforms like Google.
+
+1. Agile. Using Agile development methodologies, the project was broken up into Epics. These Epics roughly translate to apps within the Django project, with each user story added to it's relevant Epic.
+
+Epics:
+* Tennis Lessons
+* Profiles
+* Shopping Bag
+* Checkout
+* The Open Wall
+* Contact Us
+
+2. Mailchimp. At the heart of Tennis Open's marketing efforts is the implementation of a Mailchimp subscription newsletter. By encouraging users to subscribe, Tennis Open builds a dedicated community of tennis enthusiasts who receive regular updates, exclusive offers, and valuable content related to tennis and fitness. This newsletter acts as a powerful tool for customer retention and re-engagement, ensuring users stay informed and engaged with the latest news and promotions.
+
+3. Contact Us form. Tennis Open also fosters direct communication with its users through a contact us form, providing a seamless avenue for personalized interactions, addressing inquiries, feedback, and concerns promptly. By offering exceptional customer support, Tennis Open strives to build trust, strengthen relationships, and encourage repeat business.
+
+4. The Open Wall. The platform's "Open Wall" feature enables users to share experiences and connect with other tennis enthusiasts, fostering a sense of community and user-generated content. This social aspect of the website further enhances engagement and enriches the overall user experience.
+
+5. Stripe. To facilitate the purchase of tennis and fitness lessons, Tennis Open employs a secure and user-friendly e-commerce system. Users can easily browse through available lessons, select their preferences, and complete the purchase process, ensuring a seamless and convenient buying experience through the implementation of the Stripe payment system.
+
+Through its thoughtful integration of SEO, impactful marketing strategies, and user-centric features, Tennis Open establishes itself as a premier destination for tennis enthusiasts seeking high-quality lessons and a vibrant community. By continuously refining its offerings and engaging with its user base, Tennis Open aims to solidify its position as a leading player in the online tennis education and community space.
+
+## <u>4. Features</u>
 
 ### **Home Page**
 A home page that with a header that includes links to the main features of the site. Users can also view their account (if they have logged in) and also their shopping bag if they have added anything into it. A hero image shows what the site is about, with an overlayed register now button that disappears if a user has already logged in. A section stating what the club is all about, followed by quotes from members draws new users into the site. A form allows users to subscribe to a monthly newsletter using MailChimp, and at the bottom users can find the social links to the website's social platforms.
@@ -123,20 +148,7 @@ The sitemap.xml file provides a structured list of all the pages on your website
 
 <hr>
 
-## <u>4. E-commerce Business Model and Marketing Strategy
-Tennis Open, an e-commerce platform dedicated to tennis and fitness lessons, embraces an innovative business model that incorporates effective marketing strategies while keeping SEO in mind. With its name, Tennis Open cleverly integrates SEO thinking by leveraging the term "open," synonymous with prestigious tennis Grand Slam tournaments, to optimize search results on platforms like Google.
-
-1. Mailchimp. At the heart of Tennis Open's marketing efforts is the implementation of a Mailchimp subscription newsletter. By encouraging users to subscribe, Tennis Open builds a dedicated community of tennis enthusiasts who receive regular updates, exclusive offers, and valuable content related to tennis and fitness. This newsletter acts as a powerful tool for customer retention and re-engagement, ensuring users stay informed and engaged with the latest news and promotions.
-
-2. Contact Us form. Tennis Open also fosters direct communication with its users through a contact us form, providing a seamless avenue for personalized interactions, addressing inquiries, feedback, and concerns promptly. By offering exceptional customer support, Tennis Open strives to build trust, strengthen relationships, and encourage repeat business.
-
-3. The Open Wall. The platform's "Open Wall" feature enables users to share experiences and connect with other tennis enthusiasts, fostering a sense of community and user-generated content. This social aspect of the website further enhances engagement and enriches the overall user experience.
-
-4. Stripe. To facilitate the purchase of tennis and fitness lessons, Tennis Open employs a secure and user-friendly e-commerce system. Users can easily browse through available lessons, select their preferences, and complete the purchase process, ensuring a seamless and convenient buying experience through the implementation of the Stripe payment system.
-
-Through its thoughtful integration of SEO, impactful marketing strategies, and user-centric features, Tennis Open establishes itself as a premier destination for tennis enthusiasts seeking high-quality lessons and a vibrant community. By continuously refining its offerings and engaging with its user base, Tennis Open aims to solidify its position as a leading player in the online tennis education and community space.
-
-## <u>4. Future features</u>
+## <u>5. Future features</u>
 
 * ### **Tennis Courts bookings**
    An added feature that allows users to book tennis courts. And an additional bonus would allow registered users priority booking on tennis courts versus users who haven't registered.
@@ -158,7 +170,7 @@ Through its thoughtful integration of SEO, impactful marketing strategies, and u
 
 <hr>
 
-## <u>5. Facebook Page</u>
+## <u>6. Facebook Page</u>
 I've created a dedicated Facebook page for this website for users to easily interact with the Tennis Open community. 
 
 ![facebook-page](static/screenshots/facebook-page.png "Tennis Open Facebook Page")
@@ -170,8 +182,8 @@ I've used a few simple colours to keep the site as clean as possible, with the s
 
 <hr>
 
-## <u>7. Lucidchart</u>
-I used lucidchart to structure the layout of my website and its various pages and functions. Starting the user's journey on the home page, we first identify the navigation bar options:
+## <u>7. User Journeys</u>
+I used Lucid Chart to structure the layout of my website and its various pages and functions. Starting the user's journey on the home page, we first identify the navigation bar options:
 
 1. About Our Community
 2. The Open Wall
@@ -186,7 +198,58 @@ It helped to visualize and problem solve some of the issues I may have encounter
 
 <hr>
 
-## <u>8. Technology</u>
+## <u>8. Wireframes</u>
+
+Thanks to [Uizard](https://uizard.io/) for helping me map out the wireframes for the foundations of my project.
+
+The wireframes include the layout for the following pages:
+* Checkout Page
+![checkout](static/wireframes/checkout.png "Checkout Page")
+
+* Contact Us Page
+![contact_us](static/wireframes/contact_us.png "Contact Us Page")
+
+* Home Page
+![home](static/wireframes/home.png "Home Page")
+
+* Login Page
+![login](static/wireframes/login.png "Login Page")
+
+* Logout Page
+![Logout](static/wireframes/logout.png "Logout Page")
+
+* Tennis and Fitness Lessons Page
+![packages](static/wireframes/packages.png "Tennis and Fitness Lessons Page")
+
+* My Profile Page
+![profile](static/wireframes/profile.png "My Profile Page")
+
+* Shopping Bag Page
+![bag](static/wireframes/shopping_bag.png "Shopping Bag Page")
+
+* Sign Up Page
+![signup](static/wireframes/signup.png "Sign Up Page")
+
+* Thank You Page
+![thankyou](static/wireframes/thankyou.png "Thank You Page")
+
+* Email Verification Page
+![verify_email](static/wireframes/verify_email.png "Email Verification Page")
+
+* The Open Wall Page
+![open_wall](static/wireframes/wall.png "The Open Wall Page")
+
+<hr>
+
+## <u>9. Entity Relationship Diagrams</u>
+
+Using [DrawSQL](https://drawsql.app/) I could create the diagram of the models.
+
+![entity_relationship_diagram](static/wireframes/erd.png "Entity Relationship Diagram")
+
+<hr>
+
+## <u>10. Technology</u>
 
 * <b>HTML:</b> Used to structure the content of my web pages and create the overall layout.
 
@@ -212,17 +275,19 @@ It helped to visualize and problem solve some of the issues I may have encounter
 
 <hr>
 
-## <u>9. Testing</u>
+## <u>11. Testing</u>
 
    ### **Code validation**
-   1. Using Flake8 in the terminal, there were no major issues flagged in the code.
+   1. To test my Python code, I installed and ran pep8 in the terminal, all issues other than 'lines too long' errors were resolved in the code.
 
-   2. The CSS code has been checked via the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors found.
+   2. The HTML and CSS code has been checked via the [W3C validator](https://validator.w3.org/) with no errors found.
+
+   3. I used [JShint](https://jshint.com/) to validate my Javascript code, no errors were found.
 
    ### **Test cases**
 
    * #### <u>Test Cases for the Tennis Lessons and Bag Apps</u>
-      Test cases were done on the tennis lessons and bag apps to check that the user can view the packages on the page, check if the selected package has been added to the bag, and to check if the package has been added within the context.
+      Test cases were done on all apps to check the views, models and forms were all in working order and highlight any errors that required fixing. Below are a few examples:
 
    * #### <u>The Open Wall</u>
       An unregistered user would not be able to post any comments on the wall, a safety mechanism only allows users who have logged in to post comments.
@@ -257,7 +322,7 @@ It helped to visualize and problem solve some of the issues I may have encounter
    
 <hr>
 
-## <u>10. Running Locally</u>
+## <u>12. Running Locally</u>
 
 Prerequisites
 * Python 3.8.11
@@ -265,8 +330,8 @@ Prerequisites
 Installation
 1. Clone the Github repo to the desired location on your computer.
    ```sh
-   git clone git@github.com:mark3lau/the-chocolate-factory.git
-   cd the-chocolate-factory
+   git clone git@github.com:mark3lau/tennis_open.git
+   cd tennis_open
    ```
 2. Create and run a Python virtual environment in terminal.
    ```sh
@@ -281,6 +346,7 @@ Installation
    1. Create and add a [Django secret key](https://django-secret-key-generator.netlify.app/).
    2. If you'd like to test checkout payments, you'll need a [Stripe account](https://stripe.com/en-gb).
    3. If you'd like to test newsletter functionality, you'll need a [Mailchimp account](https://mailchimp.com/).
+
 5. Make migrations to prepare the database. This will create a `db.sqlite3` in the root. Remove the flags when happy to proceed.
    ```sh
    python3 manage.py makemigrations --dry-run
@@ -295,33 +361,81 @@ Installation
    python3 manage.py runserver
    ```
 
-## <u>11. Deployment</u>
+## <u>13. Deployment</u>
 
-   ### **Gitpod**
-   The site was developed using Gitpod. In order to access the Gitpod workspace, follow the steps below:
+Prerequisites
+
+- Have the project running locally (see [Running Locally](#running-locally)).
+- A [Heroku account](https://signup.heroku.com/).
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli).
+
+For full functionality:
+
+- A [Stripe account](https://stripe.com/en-gb) for the payment gateway.
+- A [Mailchimp account](https://mailchimp.com/) for the newsletter signup.
+- A [Gmail account](https://www.google.com/intl/en-GB/gmail/about/) for email SMTP.
+
+## Deployment to Heroku
    
    1. In Github repository, select the mark3lau/tennis_open project.
    2. Click on the green Gitpod button near the top of the repository page, this will open the Gitpod workspace.
-   3. Inside the terminal, you can render the Tennis Open website in the browser by typing "python3 manage.py runserver".
-
-   ### **Heroku**
-   The site was deployed to Heroku. The steps to deploy are as follows:
-
-   1. In the Heroku dashboard, click on the tennis-open app.
-   2. Click on the 'Deploy' tab near the top of the page. 
-   3. In the Deploy page, scroll down to the Manual deploy section. Choose the main branch to deploy, and click Deploy Branch. 
-   4. Once the message 'Your app was successfully deployed' is displayed, click on the View button below. The app should now be running in a new tab.
+   3. In the development environment, make sure the requirements are up to date with `pip3 freeze --local > requirements.txt`.
+   4. Also check that the `.gitignore` file lists everything that should not be pushed to production, such as `env.py`.
+   5. In terminal, login to Heroku. Then run the following commands:
+   ```sh
+   heroku create fancy-new-app --region eu # create an app called fancy-new-app
+   ```
+   6. Set the following environment variables on Heroku:
+   ```sh
+   heroku config:set CLOUDINARY_URL='' # cloudinary
+   heroku config:set DATABASE_URL='' # postgresql database from elephantsql
+   heroku config:set EMAIL_HOST_PASS='' # gmail smtp
+   heroku config:set EMAIL_HOST_USER='' # gmail smtp
+   heroku config:set HOST='fancy-new-app.herokuapp.com' # the heroku app URL or live domain
+   heroku config:set SECRET_KEY='' # the Django secret key
+   heroku config:set STRIPE_PUBLIC_KEY='' # stripe
+   heroku config:set STRIPE_SECRET_KEY='' # stripe
+   heroku config:set STRIPE_WH_SECRET='' # stripe
+   ```
+   7. Create a `Procfile` to setup Heroku with gunicorn and run migrations. It should contain the following:
+   ```sh
+   web: gunicorn base_project.wsgi
+   release: python manage.py migrate
+   ```
+   8. Heroku should have automatically created an empty git repo in your Heroku app when the app was created above. Else you'll need to [manually add a Heroku remote](https://devcenter.heroku.com/articles/git).
+   9. When the remote is good to go, push the project to Heroku (assuming the branch is called `main`).
+   ```sh
+   git push heroku main
+   ```
+   10.  [optional] You may need to make migrations before running migrate again to bring Postgres up to date. Remove the flags when happy to proceed.
+   ```sh
+   heroku run python3 manage.py makemigrations --dry-run
+   heroku run python3 manage.py migrate --plan
+   ```
+   11. When the deployment has succeeded, you can optionally create a new superuser:
+    ```sh
+    heroku run python manage.py createsuperuser
+    ```
 
 <hr>
 
-## <u>12. Credits</u>
+## <u>14. Credits</u>
 
    ### **Code**
-   The code to implement the stripe payment system, the checkout app and basic structure of the bag were taken from the Code Institute walk-through project Boutique Ado.
+   * The code to implement the stripe payment system, the checkout app and basic structure of the bag were taken from the Code Institute walk-through project Boutique Ado.
    
    ### **Images**
-   The images of the two tennis players and the tennis girl, both featured on the home page, were taken from [Unsplash](https://unsplash.com/s/photos/tennis).
+   * The images of the two tennis players and the tennis girl, both featured on the home page, were taken from [Unsplash](https://unsplash.com/s/photos/tennis).
    
    ### **Logo**
-   The logo of the website was designed using the free site [Canva](https://www.canva.com/logos/).
+   * The logo of the website was designed using the free site [Canva](https://www.canva.com/logos/).
+
+   ### **Lucid Chart**
+   * Thanks for Lucid Chart for mapping out the user journeys.
+
+   ### **Uizard**
+   * Uizard was used to design the wireframes for the foundations of the project.
+
+   ### **DrawSQL**
+   * DrawSQL was the preferred tool to map out my Entity Relationship Diagram.
    
