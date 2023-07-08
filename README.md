@@ -67,7 +67,7 @@ Messages for successes and errors that notify the user when an action has been e
 ## <u>3. Agile Development, E-commerce Business Model and Marketing Strategy</u>
 Tennis Open, an e-commerce platform dedicated to tennis and fitness lessons, embraces an innovative business model that incorporates effective marketing strategies while keeping SEO in mind. With its name, Tennis Open cleverly integrates SEO thinking by leveraging the term "open," synonymous with prestigious tennis Grand Slam tournaments, to optimize search results on platforms like Google.
 
-1. Agile. Using Agile development methodologies, the project was broken up into Epics. These Epics roughly translate to apps within the Django project, with each user story added to it's relevant Epic.
+1. Agile. Using Agile development methodologies, the project was broken up into Epics. These Epics roughly translate to apps within the Django project, with each user story added to it's relevant Epic. A kanban board was developed and is available to view in github.
 
 Epics:
 * Tennis Lessons
